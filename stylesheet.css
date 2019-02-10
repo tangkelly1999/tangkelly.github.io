@@ -1,9 +1,20 @@
 body {
   padding-top: 0;
   padding-left: 10rem;
+
+  /*background:linear-gradient(90deg,rgba(255,255,255,.1) 0,rgba(255,255,255,.1) 100%),url(images/wallpaper1.jpg);*/
+  background-image: url(images/wallpaper1.jpg);
+  
+  /*center and scale image nicely*/
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover auto;
+
 }
 
+
 h1, h2, h3, h4, h5, h6 {
+  color: #FFF0F5;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -18,6 +29,7 @@ h2 {
 }
 
 .subheading {
+  color: #FFF0F5;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1.0rem;
@@ -31,6 +43,7 @@ h2 {
 
 #directory .navbar-toggler:focus {
   outline-color: #d48a6e;
+
 }
 
 #directory {
@@ -83,16 +96,18 @@ section.home {
   }
 
   #directory {
-    width: 20rem;
+    width: 15rem;
     padding-top: 17rem;
   }
 
   h1 {
+    
     font-size: 5rem;
     line-height: 5rem;
   }
 
   h2 {
+
     font-size: 3rem;
   }
 
@@ -100,13 +115,15 @@ section.home {
 
 @media (min-width: 992px) {
   #directory {
-    width: 30rem;
+    text-align: center;
+    width: 17rem;
     padding-top: 23rem;
   }
 
   body {
     padding-top: 0;
-    padding-left: 30rem;
+    padding-left: 20rem;
+
   }
 
   h1 {
@@ -120,7 +137,9 @@ section.home {
 }
 
 .bg-primary {
-  background-color: #313e54 !important;
+  /*background-color: #313e54 !important;*/
+  /*make navbar translucent*/
+  background-color: rgba(134,136,138,0.5) !important;
 }
 
 a:hover, a:focus, a:active {
