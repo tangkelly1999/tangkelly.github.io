@@ -1,14 +1,17 @@
 body {
-  padding-top: 0;
+  padding-top: 0rem;
   padding-left: 10rem;
+  font-family: 'futura';
 
   /*background:linear-gradient(90deg,rgba(255,255,255,.1) 0,rgba(255,255,255,.1) 100%),url(images/wallpaper1.jpg);*/
-  background-image: url(images/wallpaper1.jpg);
+  background-image: url(images/wallpaper3.jpg);
+  background:linear-gradient(90deg,rgba(255,255,255,.1) 0,rgba(255,255,255,.1) 100%),url(images/wallpaper5.jpg)
   
   /*center and scale image nicely*/
-  background-position: center center;
+  background-position: center 0;
   background-repeat: no-repeat;
-  background-size: cover auto;
+  background-size: 100% auto;
+
 
 }
 
@@ -20,11 +23,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+
   font-size: 4rem;
   line-height: 4rem;
 }
 
 h2 {
+  color: black;
   font-size: 2.5rem;
 }
 
@@ -93,6 +98,7 @@ section.home {
 @media (min-width: 768px) {
   body {
     padding-left: 20rem;
+
   }
 
   #directory {
@@ -116,13 +122,13 @@ section.home {
 @media (min-width: 992px) {
   #directory {
     text-align: center;
-    width: 17rem;
-    padding-top: 23rem;
+    width: 15rem;
+    padding-top: 13rem;
   }
 
   body {
     padding-top: 0;
-    padding-left: 20rem;
+    padding-left: 13rem;
 
   }
 
@@ -139,7 +145,7 @@ section.home {
 .bg-primary {
   /*background-color: #313e54 !important;*/
   /*make navbar translucent*/
-  background-color: rgba(134,136,138,0.5) !important;
+  background-color: rgba(150,150,150,0.75) !important;
 }
 
 a:hover, a:focus, a:active {
