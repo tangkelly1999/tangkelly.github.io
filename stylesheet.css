@@ -23,7 +23,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-
   font-size: 4rem;
   line-height: 4rem;
 }
@@ -41,13 +40,15 @@ h2 {
 }
 
 #directory .navbar-nav .nav-item .nav-link {
+
   font-weight: 800;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
 }
 
 #directory .navbar-toggler:focus {
-  outline-color: #d48a6e;
+  /*outline-color: #d48a6e;*/
+  outline-color: #FFFFFF;
 
 }
 
@@ -95,15 +96,27 @@ section.home {
   min-height: 100vh;
 }
 
+.my-project {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  max-width: 250px;
+  margin:auto auto 1rem;
+}
+
+/*smaller window*/
 @media (min-width: 768px) {
+
   body {
-    padding-left: 20rem;
+    /*space between navbar and page content*/
+    padding-left: 13rem;
+
 
   }
 
   #directory {
-    width: 15rem;
-    padding-top: 17rem;
+    width: 12rem;
+    padding-top: 12rem;
   }
 
   h1 {
@@ -116,9 +129,14 @@ section.home {
 
     font-size: 3rem;
   }
+  .my-project {
+  max-width: 300px;
+  margin:auto auto 1rem;
+  }
 
 }
 
+/*larger window*/
 @media (min-width: 992px) {
   #directory {
     text-align: center;
@@ -140,13 +158,19 @@ section.home {
   h2 {
     font-size: 3.5rem;
   }
+  .my-project {
+  max-width: 400px;
+  margin:auto auto 1rem;
+  }
 }
 
 .bg-primary {
   /*background-color: #313e54 !important;*/
   /*make navbar translucent*/
-  background-color: rgba(150,150,150,0.75) !important;
+  background-color: rgba(60,50,50,0.75) !important;
 }
+
+
 
 a:hover, a:focus, a:active {
   color: #824027;
