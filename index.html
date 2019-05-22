@@ -36,13 +36,12 @@
 		        <a class="nav-link" href="#projects">Projects</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#idkwhatelse">Contact Me</a>
+		        <a class="nav-link" href="#contact">Contact Me</a>
 		      </li>
 		      </li>
 	        </ul>
 		  
     </nav>
-
 
      <header class="body" d-flex" style="overflow-x: hidden; overflow-y: hidden;">
        <div class="overlay" style="position: absolute;"></div>
@@ -52,34 +51,41 @@
       <div class="my-auto">
         <h1 class="mb-0">Kelly Tang</h1>
         <div class="subheading mb-5"> University of Waterloo | Electrical Engineering Student </div>
-       
       </div>
-
- 
-
     </section>
 
     <section class="content p-3 p-lg-5 d-flex flex-column" id="about">
       <div>
-        <h2 class="mb-5">About</h2>
-        Hello there! I'm Kelly and I'm an Electrical Engineering student at the University of Waterloo. Over the past few years, I have been gaining design experience through co-ops and projects, including: <br>
-        	</pre> - PCB design and layout using Altium Designer <br>
-        	</pre> - Power distribution for residential and commercial buildings (e.g. Hilton Niagara Hotels) <br>
-        	</pre> - Firmware development on STM32F0 series in C (working knowledge) <br>
-        I really enjoy working with both hardware and firmware, and I'd love to explore other areas including ASIC design and wireless technologies. 
+        <h2 class="mb-3">About</h2>
+        <br>Hello there! I'm Kelly and I'm an Electrical Engineering student at the University of Waterloo. Over the past few years, I have been gaining design experience through co-ops and projects, including: <br><br>
+        	<ul class="list-unstyled">
+    			<ul>
+					<li>PCB design and layout using Altium Designer</li>	
+		    		<li>Power distribution for residential and commercial buildings (e.g. Hilton Niagara Hotels)</li>
+					<li>Firmware development on STM32F0 series in C (working knowledge)</li>
+				</ul>
+			</ul>
 
-        I spend most of my time working on Canada's top multi-occupant solar car, Midnight Sun. You can also find me at the gym almost everyday 
+        I spend most of my time working on Canada's top multi-occupant solar car, Midnight Sun. My other hobbies include weight-lifting and taking my pup to the dog park. Feel free to contact me to chat more! 
+        <br><br>
+        <!--Profile Pic-->
+        <div class="container">
+        	<img src="images/profile.png" class="rounded-circle mx-auto d-block" width="250" height="170"> 
+        <div class="container">	<!--END Profile Pic-->
 
-        Currently looking for job opportunities for fall 2019. pLS hire.
-
-        *resume* *linkedin* 
+        <div class="container-fluid text-center">
+	        <a class="btn btn-outline-primary" role="button" href="resume.pdf" target="_blank" style="margin:10px">&nbsp Resume &nbsp</a>
+	        <a class="btn btn-outline-primary " role="button" href="https://www.linkedin.com/in/tangkelly1999/" target="_blank" style="margin:10px">&nbsp Linkedin &nbsp</a>
+	        <a class="btn btn-outline-primary " role="button" href="https://github.com/tangkelly1999" target="_blank" style="margin:10px">&nbsp Github &nbsp</a>
+	        <a class="btn btn-outline-primary" role="button" href="#contact" style="margin:10px">&nbsp Contact &nbsp</a>
+	    </div>
       </div>
     </section>
 
 <!---PROJECTS--->
     <section class="content p-0 p-lg-5 d-flex flex-column" id="projects">
       	<div class ="container">
-        <h2 class="mb-5">Projects</h2>
+        <h2 class="mb-3">Projects</h2>
 
 	        <!--Projects row 1--->	
 	        <div class="row">
@@ -101,7 +107,7 @@
 		        <!--Driver Controls project-->
 		        <div class='col'>
 		        	<div class ='my-project'>
-			        	<a href="s" data-toggle="modal" data-target="#DriverDisplayModal">
+			        	<a href="s" data-toggle="modal" data-target="#DriverControlsModal">
 			        		<!--Hover Effect-->
 			        		<div class="box12">
 					        	<img class="img-fluid" src="images/ms12.png" alt="">
@@ -119,7 +125,7 @@
 		         <!--Onion Omega project-->
 		        <div class='col'>
 		        	
-		        	<a href="s" data-toggle="modal" data-target="#DriverDisplayModal">
+		        	<a href="s" data-toggle="modal" data-target="#Modal3">
 		        		<!--Hover Effect-->
 		        		<div class="box12">
 				        	<img class="img-fluid" src="images/omega.jpg" alt="">	
@@ -129,36 +135,42 @@
 				        </div><!--END Hover Effect-->  
 		        	</a>
 		        </div><!--END Onion Omega project-->
-		   		
-		        
+		   				        
 		         <!--Onion Omega project-->
 		        <div class='col'>
 		        	
-		        	<a href="s" data-toggle="modal" data-target="#DriverDisplayModal">
+		        	<a href="s" data-toggle="modal" data-target="#Modal4">
 		        		<!--Hover Effect-->
 		        		<div class="box12">
 				        	<img class="img-fluid" src="images/display3.png" alt="">	
 				        	<div class="box-content">	
-				            	<h3 class="title">Misc</h3>     
+				            	<h3 class="title">PCB Manufacturing</h3>     
 				            </div>
 				        </div><!--END Hover Effect-->  
 		        	</a>
 		        </div><!--END Onion Omega project-->
 	        </div><!---END projects row2--->
-	    </div>    
-    	
+	    </div>       	
     </section>	
-
-
-<!--   <button class="collapsible">Open Collapsible</button>
-    <div class="cont"><a href="s" data-toggle="modal" data-target="#DriverDisplayModal">
-      <p>Lorem ipsum asdakdhaskjdhsakjhdjkashdkjahskdjhasjkdhkjashdjkhaskjdhaskjdhkajshdkjahjksdhsakjdhkjashdkjh kjhkj ...</p>
-    </div> -->
-
       </div>
     </section><!---END PROJECTS---->
 
-    <!----MODAL POPUP--->
+ <!--Contact -->
+ 	<section class="content p-3 p-lg-5 d-flex flex-column" id="contact">
+      <div>
+        <h2 class="mb-3">Contact Me</h2>
+        <ul class="list-unstyled">
+    		<li>You can reach me by
+    			<ul>
+			    	<li>Email: tangkelly1999@outlook.com</li>	
+			    	<li>Phone: 647-862-6820</li>
+					</ul>
+			</li>
+		</ul>
+      </div>
+    </section>
+
+    <!----MODAL 1 POPUP--->
 
     <section class="modal fade" id="DriverDisplayModal" aria-hidden="true">
     	<div class="modal-dialog modal-lg modal-dialog-centered ">
@@ -168,22 +180,117 @@
     				<h2 class="modal-title">DRIVER DISPLAY BOARD </h2>
     			</div>
     			<div class="modal-body">
-    				<p> afjaskdjfkslafjdasfjdka;sjfdalfsj
-    					fjdas;lfjdsaklfjdskal;f
-    					alsdfjals;djflaksjdfkas;das
-    				fkjldajsklfjdkalsafjaskdjfkslafjdasfjdka;sjfdalfsj
-    					fjdas;lfjdsaklfjdskal;f
-    					alsdfjals;djflaksjdfkas;das
-    				fkjldajsklfjdkalafjaskdjfkslafjdasfjdka;sjfdalfsj
-    					fjdas;lfjdsaklfjdskal;f
-    					alsdfjals;djflaksjdfkas;dass
-    				fkjldajsklfjdkalafja</p>
+    				<div class ="paragraph_italics" >
+    					<p><small>The Midnight Sun Solar Car Team has been designing and building solar-powered electric vehicles at the University of Waterloo since 1988. With our next car, MS XIV, we’re creating a car that is both energy-efficient and practical. Midnight Sun proudly represents our university at both the American Solar Challenge and World Solar Challenge.</small></p>
+    				</div>	
+    					Goal of Driver Display System: We wanted to design a vehicle dashboard that acts as an instrument panel to the driver. It should show information such as speed, state of car, power usage percentage and charge on a LCD screen. The software will be run on the Raspberry Pi. <br><br>
+
+    					<ul class="list-unstyled">
+    						<li>My task was to design a PCB that:
+    							<ul>
+		    						<li>Handles CAN <-> UART translation between the CAN network and RasberryPi</li>	
+		    						<li>Regulate voltage from the 12V supplied to 5V for the Pi</li>
+									<li>Automatically adjusts screen brightness by using an ambient light sensor </li>
+									<li>Contains the RTC for Pi</li>
+								</ul>
+							</li>
+						</ul>
+						Skills developed: PCB design and layout using Altium Designer, board bring-up, JIRA, Git
+    					</p>
+
+    				<!--Driver Display Sliding Gallergy-->	
+    				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+					  <ol class="carousel-indicators">
+					    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+					    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+					    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+					  </ol>
+					  <div class="carousel-inner">
+					    <div class="carousel-item active">
+					      <img class="d-block w-100" src="images/ms12_view.png" alt="First slide">
+					    </div>
+					    <div class="carousel-item">
+					      <img class="d-block w-100" src="images/display_pcb.png" alt="Second slide">
+					    </div>
+					    <div class="carousel-item">
+					      <img class="d-block w-100" src="images/display_incar.png" alt="Third slide">
+					    </div>
+					  </div>
+					  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+					    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					    <span class="sr-only">Previous</span>
+					  </a>
+					  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+					    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+					    <span class="sr-only">Next</span>
+					  </a>
+					</div><!--END Driver Display Sliding Gallergy-->
     			</div>
     		</div><!--end, modal content-->
     	</div><!---end, modal dialog-->
     </section>
+    <!----END MODAL 1 --->
 
-    <!----END MODAL--->
+    <!----MODAL 2 POPUP--->
+    <section class="modal fade" id="DriverControlsModal" aria-hidden="true">
+    	<div class="modal-dialog modal-lg modal-dialog-centered ">
+    		<div class="modal-content">
+    			<div class="modal-header">
+    				<button class="close" type="button" data-dismiss="modal">x</button>
+    				<h2 class="modal-title">DRIVER CONTROLS </h2>
+    			</div>
+    			<div class="modal-body">
+    				<div class ="paragraph_italics" >
+    					<p><small>The Midnight Sun Solar Car Team has been designing and building solar-powered electric vehicles at the University of Waterloo since 1988. With our next car, MS XIV, we’re creating a car that is both energy-efficient and practical. Midnight Sun proudly represents our university at both the American Solar Challenge and World Solar Challenge.</small></p>
+    				</div>
+    				<p> 
+    					WIP
+    				</p>
+    			</div>
+    		</div><!--end, modal content-->
+    	</div><!---end, modal dialog-->
+    </section>
+    <!----END MODAL 2 --->
+
+    <!----MODAL 3 POPUP--->
+    <section class="modal fade" id="Modal3" aria-hidden="true">
+    	<div class="modal-dialog modal-lg modal-dialog-centered ">
+    		<div class="modal-content">
+    			<div class="modal-header">
+    				<button class="close" type="button" data-dismiss="modal">x</button>
+    				<h2 class="modal-title"> SMART PLANT </h2>
+    			</div>
+    			<div class="modal-body">
+    				<p> 
+    					WIP
+    				</p>
+    			</div>
+    		</div><!--end, modal content-->
+    	</div><!---end, modal dialog-->
+    </section>
+    <!----END MODAL 3 --->
+
+    <!----MODAL 4 POPUP--->
+    <section class="modal fade" id="Modal3" aria-hidden="true">
+    	<div class="modal-dialog modal-lg modal-dialog-centered ">
+    		<div class="modal-content">
+    			<div class="modal-header">
+    				<button class="close" type="button" data-dismiss="modal">x</button>
+    				<h2 class="modal-title">PCB MANUFACTURING </h2>
+    			</div>
+    			<div class="modal-body">
+    				<p> 
+    					WIP
+    				</p>
+    			</div>
+    		</div><!--end, modal content-->
+    	</div><!---end, modal dialog-->
+    </section>
+    <!----END MODAL 4 --->
+
+
+
+
 
 
     <!-- Bootstrap core JavaScript -->

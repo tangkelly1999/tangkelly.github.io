@@ -11,8 +11,6 @@ body {
   background-position: center 0;
   background-repeat: no-repeat;
   background-size: 100% auto;
-
-
 }
 
 
@@ -23,13 +21,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 4rem;
-  line-height: 4rem;
+  font-size: 4vw;
+  line-height: 4vw;
 }
 
 h2 {
   color: black;
   font-size: 2.5rem;
+}
+
+.paragraph_italics{
+  font-style: italic;
+  color: rgba(60,50,60,.75);
+}
+
+.btn{
+  color:rgba(60,50,50,0.75);
+  border-color:rgba(60,50,50,0.75);
+  border-width: 3px;
+}
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
+  background-color: rgba(60,50,60,.75)!important; /*brown colour*/
+  border-color: rgba(60,50,60,.75) !important;
+  color: white !important;
 }
 
 .subheading {
@@ -84,7 +98,6 @@ h2 {
   border: 0.5rem solid rgba(255, 255, 255, 0.2);
 }
 
-
 section.content {
   min-height: 100vh;
 }
@@ -97,10 +110,8 @@ section.home {
 }
 
 .my-project {
-  
   max-width: 500px;
   margin:auto auto 1rem;
-
 }
 
 /*smaller window*/
@@ -109,8 +120,6 @@ section.home {
   body {
     /*space between navbar and page content*/
     padding-left: 12rem;
-
-
   }
 
   #directory {
@@ -165,16 +174,15 @@ section.home {
 }
 
 .bg-primary {
-  /*background-color: #313e54 !important;*/
   /*make navbar translucent*/
-  background-color: rgba(60,50,50,0.75) !important;
+  /*brown colour*/
+  background-color: rgba(60,50,60,0.75) !important;
 }
 
 
 a:hover, a:focus, a:active {
   color: #824027;
 }
-
 
 /*hover effect*/
 .box12 {
