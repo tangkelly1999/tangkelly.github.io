@@ -4,7 +4,7 @@ body {
   font-family: 'futura';
 
   /*background:linear-gradient(90deg,rgba(255,255,255,.1) 0,rgba(255,255,255,.1) 100%),url(images/wallpaper1.jpg);*/
-  background-image: url(images/wallpaper3.jpg);
+  background-image: url(images/wallpaper.png);
   background:linear-gradient(90deg,rgba(255,255,255,.1) 0,rgba(255,255,255,.1) 100%),url(images/wallpaper5.jpg)
   
   /*center and scale image nicely*/
@@ -29,6 +29,9 @@ h2 {
   color: black;
   font-size: 2.5rem;
 }
+h3 {
+  font-size:3vw!important;
+}
 
 .paragraph_italics{
   font-style: italic;
@@ -45,6 +48,8 @@ h2 {
   border-color: rgba(60,50,60,.75) !important;
   color: white !important;
 }
+
+
 
 .subheading {
   color: #FFF0F5;
@@ -121,20 +126,16 @@ section.home {
     /*space between navbar and page content*/
     padding-left: 12rem;
   }
-
   #directory {
     width: 12rem;
     padding-top: 12rem;
   }
-
   h1 {
     
     font-size: 5rem;
     line-height: 5rem;
   }
-
   h2 {
-
     font-size: 3rem;
   }
   .my-project {
@@ -151,18 +152,14 @@ section.home {
     width: 15rem;
     padding-top: 13rem;
   }
-
   body {
     padding-top: 0;
     padding-left: 15rem;
-
   }
-
   h1 {
     font-size: 6rem;
     line-height: 5.5rem;
   }
-
   h2 {
     font-size: 3.5rem;
   }
