@@ -1,7 +1,7 @@
 body {
   padding-top: 0rem;
   padding-left: 10rem;
-  font-family: 'futura';
+  font-family: 'Muli';
 
   /*background:linear-gradient(90deg,rgba(255,255,255,.1) 0,rgba(255,255,255,.1) 100%),url(images/wallpaper1.jpg);*/
   background-image: url(images/wallpaper.png);
@@ -59,15 +59,14 @@ h3 {
 }
 
 #directory .navbar-nav .nav-item .nav-link {
-
-  font-weight: 800;
+  font-weight: 900;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
 }
 
 #directory .navbar-toggler:focus {
   /*outline-color: #d48a6e;*/
-  outline-color: #FFFFFF;
+  outline-color: white;
 
 }
 
