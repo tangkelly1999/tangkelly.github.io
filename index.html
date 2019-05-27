@@ -43,7 +43,6 @@
 	        </ul>
 		  
     </nav>
-
  
 
     <section class="home p-3 p-lg-5 d-flex d-column" id="home">
@@ -72,7 +71,7 @@
         <br><br>
         <!--Profile Pic-->
         <div class="container">
-        	<img src="images/profile.png" class="rounded-circle mx-auto d-block" width="250" height="170"> 
+        	<img src="images/profile.png" class="rounded-circle mx-auto d-block" width="260" height="175"> 
         <div class="container">	<!--END Profile Pic-->
 
         <div class="container-fluid text-center">
@@ -109,12 +108,12 @@
 		        <!--Driver Controls project-->
 		        <div class='col'>
 		        	<div class ='my-project'>
-			        	<a href="s" data-toggle="modal" data-target="#DriverControlsModal">
+			        	<a href="s" data-toggle="modal" data-target="#Modal2">
 			        		<!--Hover Effect-->
 			        		<div class="box12">
 					        	<img class="img-fluid" src="images/ms12.png" alt="">
 					        	<div class="box-content">	
-					            	<h3 class="title">MSXII Driver Controls</h3>     
+					            	<h3 class="title">MSXII Current Sense</h3>     
 					            </div>
 					        </div><!--END Hover Effect-->  
 			        	</a>
@@ -141,7 +140,7 @@
 		         <!--Onion Omega project-->
 		        <div class='col'>
 		        	
-		        	<a href="s" data-toggle="modal" data-target="#Modal">
+		        	<a href="s" data-toggle="modal" data-target="#Modal4">
 		        		<!--Hover Effect-->
 		        		<div class="box12">
 				        	<img class="img-fluid" src="images/pcb.jpg" alt="">	
@@ -246,13 +245,82 @@
     					<p><small>The Midnight Sun Solar Car Team has been designing and building solar-powered electric vehicles at the University of Waterloo since 1988. With our next car, MS XIV, we’re creating a car that is both energy-efficient and practical. Midnight Sun proudly represents our university at both the American Solar Challenge and World Solar Challenge.</small></p>
     				</div>
     				<p> 
-    					WIP
+                        The driver controls system consists of multiple boards separated into three types: The Driver Controls Carrier board, Pedal board, and the Control Stalk Interface board. The carrier board is the central hub for inputs and it transmits that information to the rest of the CAN network. It holds the controller board (which holds the STM32F0 MCU and CAN Trasciever). The pedal PCB fits near the brake and accelerator pedal. It takes in analog signals from the accelerator pedal and it hosts a magnetic sensor for brake pedal sensing. The Control Stalk Interface board inputs signals from the steering wheel, and controls turn signals, cruise control signals, and high beams.<br><br>
+
+                        My task: <br>
+                        We used I2C to communicate between boards last year for competition, but the boards were placed relatively far apart (e.g. the pedal board was half a meter away from the steering). That distance meant the signals were susceptible to EMI from our motors and walkie-talkies. <br><br>
+
+                        My focus was on trying to testing and reducing noise for the Steering system. For example, the turn signal stalk should output different voltages to the ADC, depending on if the right turn or left turn signal should be on. However, the noise from the walkie-talkies is so significant that our actual signals are almost irrecognizable. 
+
+                         <br><br>pictures here <br><br>
+
+                        <ul class="list-unstyled">
+                            <li>Solutions I tested include:
+                                <ul>
+                                    <li>Using an active low-pass RC filter</li>    
+                                    <li>Using aluminum shielded cables</li>
+                                    <li>Ferrite Core over the cable</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        Starting out with a 15KOhm resistor and a 0.1uF capacitor, I thought any signals above 10Hz would be filtered out successfully. That did not work. I tried other resistor and capacitor values, which all failed to actually reduce the radio's noise. That's when I found out that our walkie-talkie's 32MHz signal is at a frequency so high that the capacitor's parasitic inductance took over. 
+
+                        After hours of testing, we decided 
+                                  
     				</p>
     			</div>
     		</div><!--end, modal content-->
     	</div><!---end, modal dialog-->
     </section>
     <!----END MODAL 2 --->
+
+    <!----MODAL 2 POPUP--->
+    <section class="modal fade" id="Modal2" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal">x</button>
+                    <h2 class="modal-title modal-title-centered"> MSXII Current Sense</h2>
+                </div>
+                <div class="modal-body">
+                    <div class ="paragraph_italics" >
+                        <p><small>The Midnight Sun Solar Car Team has been designing and building solar-powered electric vehicles at the University of Waterloo since 1988. With our next car, MS XIV, we’re creating a car that is both energy-efficient and practical. Midnight Sun proudly represents our university at both the American Solar Challenge and World Solar Challenge.</small></p>
+                    </div>  
+                    <p> 
+                        Current measurement is an essential requirement for our BMS (Battery Management System), as it will allow us to protect the battery from over-current conditions, calculate SOC (State of Charge), and monitor solar/grid charging. Being able to calculate SOC is quite important, so the more accurate we can measure current, the better we can calculate our power usages. <br><br>
+
+                        I am currently designing the 3rd revision for the current sense PCB. The issue with the previous board was that the ADC did not meet our desired accuracy and input range. Our new board will contain a 24-bit ADC with a 3V input range, so that we can accurately measure current ranging from -150A to +150A.
+                    </p>
+                    <!--Current Sense Sliding Gallergy-->  
+                    <div id="carousel2" class="carousel slide" data-ride="carousel">
+                      <ol class="carousel-indicators">
+                        <li data-target="#carousel2" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel2" data-slide-to="1"></li>
+                      </ol>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img class="d-block w-100" src="images/ms12_diagram.png" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="images/BMS_block.png" alt="Second slide">
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carousel2" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carousel2" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div><!--END current sense Sliding Gallergy-->
+
+                </div>
+            </div><!--end, modal content-->
+        </div><!---end, modal dialog-->
+    </section>
+    <!----END MODAL 2--->
 
     <!----MODAL 3 POPUP--->
     <section class="modal fade" id="Modal3" aria-hidden="true">
@@ -282,8 +350,47 @@
     			</div>
     			<div class="modal-body">
     				<p> 
-    					WIP
+    					In the first picture below is a PCB made by the previous co-op student. Problems included uneven solder mask, short circuits, and solder mask in the holes which made soldering through-hole components almost impossible. As a result, many customers were lost. My job was to fix our damaged reputation by consistently producing high-quality PCB’s. <br><br>
+
+                        Within 3 weeks I was able to fix all issues and I was consistently making PCBs that had no short circuits and had uniform solder masks. I also looked closely at their schematics, and tested each PCB I made to make sure the connections on the board were correct. As a result, students and faculty members were very happy at the quality and turnaround time of their boards. I made training manuals and videos for the future co-op students that documented my problem solving process. 
     				</p>
+
+                    <!--PCB manufacturing Sliding Gallergy-->  
+                    <div id="carousel4" class="carousel slide" data-ride="carousel">
+                      <ol class="carousel-indicators">
+                        <li data-target="#carousel4" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel4" data-slide-to="1"></li>
+                        <li data-target="#carousel4" data-slide-to="2"></li>
+                      </ol>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img class="d-block w-100" src="images/pcb_before.png" alt="First slide">
+                          <div class="carousel-caption">
+                          <h3>BEFORE</h3>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="images/pcb_after.png" alt="Second slide">
+                          <div class="carousel-caption">
+                          <h3>AFTER</h3>
+                          </div>
+                        </div>
+                        <div class="carousel-item">
+                          <img class="d-block w-100" src="images/pcb_after2.png" alt="Third slide">
+                          <div class="carousel-caption">
+                          <h3>AFTER</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carousel4" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carousel4" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div><!--END PCB manufacturing Sliding Gallergy-->
     			</div>
     		</div><!--end, modal content-->
     	</div><!---end, modal dialog-->
